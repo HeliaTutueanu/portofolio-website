@@ -1,15 +1,15 @@
 :root {
   --primary-color: #b8b9ec;
   --secondary-color: #dddff7;
-  --font-weight9: 900px;
-  --font-weight7: 700px;
+  --font-weight-b: bolder;
+  --font-weight-l:bold;
   --font-size: 18px;
 }
 
 body {
     background: linear-gradient(to top,#b8b9ec 1%, #dddff7 87%, #fff 100%);
     font-family: 'Lato', sans-serif;
-    font-weight: var(--font-weight7);
+    font-weight: var(--font-weight-l);
     font-size: var(--font-size);
     line-height: 1.6;
   }
@@ -43,7 +43,7 @@ header {
     padding: 15px;
     display: block;
     font-size: x-large;
-    font-weight: bold;
+    font-weight: var(--font-weight-l);
     box-sizing: border-box;
   }
 
@@ -54,7 +54,7 @@ footer {
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: large;
-    font-weight: 500;
+    font-weight: 600px;
   }
 
 .footer {
@@ -71,6 +71,13 @@ div {
 nav {
     float: right;
     box-sizing: border-box;
+  }
+
+#contact-form {
+    background: rgba(74, 61, 151, 0.479);
+    padding: 50px;
+    margin: 80px;
+    text-align: center;
   }
 
 input,
@@ -103,14 +110,14 @@ textarea {
 
 .grid-item {
     background: rgba(74, 61, 151, 0.479);
-    font-weight: var(--font-weight9);
+    font-weight: var(--font-weight-l);
     margin: 50px;
     width: 750px;
   }
 
 .grid-item2 {
     background: rgba(74, 61, 151, 0.479);
-    font-weight: var(--font-weight9);
+    font-weight: var(--font-weight-l);
     margin: 50px;
     text-align: right;
     width: 750px;
@@ -172,25 +179,25 @@ p {
 
 h1 {
     font-size: 30px;
-    font-weight: var(--font-weight7);
+    font-weight: var(--font-weight-b);
     color: #4b48da;
   }
   
 h2 {
     font-size: 24px;
-    font-weight: var(--font-weight7);
+    font-weight: var(--font-weight-b);
     color: #bfe0f0;
   }
   
 h3 {
     font-size: var(--font-size);;
-    font-weight: var(--font-weight7);
+    font-weight: var(--font-weight-b);
     color: #4b48da;
   }
 
 h4 {
     font-size: var(--font-size);;
-    font-weight: var(--font-weight7);
+    font-weight: var(--font-weight-b);
     color: #bfe0f0;
     font-style: italic;
   }
@@ -223,7 +230,9 @@ a:active {
   }
 
 .button,
-button{
+button,
+input[type=submit]{
+    font-weight: var(--font-weight-b);
     border: none;
     display: inline-block;
     font-family: inherit;
@@ -243,10 +252,16 @@ button{
 button:hover,
 button:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
     cursor: pointer;
     opacity: 0.8;
   }
+
+#hire-button a{
+    color: white;
+    }
 
 .newsletter-button {
     background-color: #bfe0f0;
@@ -374,64 +389,13 @@ button:focus,
     text-align: left;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
+input[type=text], select, textarea {
+  width: 500px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
 }
-
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-  to {
-    transform: translate(100px, 48px);
-  }
-} */

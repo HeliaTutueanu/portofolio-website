@@ -1,26 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsletter Helia Tutueanu</title>
+  <title>Contact Helia Tutueanu</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lora:ital@1&family=Slabo+27px&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/styles.production.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
 <body>
   <header class="header">
-    <img src="./img/logo.png" class="logo" alt="logo" >
+    <img src="../img/logo.png" class="logo" alt="logo" >
     <nav class="main-nav-header">
       <ul role="menubar" class="navigation-list">
         <li role="presentation">
-          <a href="index.html" role="menuitem" class="nav-list-item">HOME</a>
+          <a href="../index.html" role="menuitem" class="nav-list-item">HOME</a>
         </li>
         <li role="presentation">
           <a href="about.html" role="menuitem" class="nav-list-item">ABOUT</a>
@@ -34,20 +33,37 @@
       </ul>
     </nav>
   </header>
-  <section>
-    <div class="newsletter-border">
-      <div class="newsletter">
-        <h2>NEWSLETTER</h2>
-        <p>Subscribe to my <span>newsletter</span> to be updated regarding my new projects or discounts.</p>
-        <form action="#">
-          <input placeholder="Enter your Email Address" type="email" class="newsletter-email">
-          <br>
-          <button name="subscribe" type="button" id="newsletter-subscribe" data-submit="...Subscribed!">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
-  <footer class="footer">
+  <div class="contact-profile">
+    <h1>Helia Tutueanu</h1>
+    <h3>Full-Stack Developer</h3>
+    <p>Athens, Greece</p>
+    <a href="tel:+49 30 4849 2016">PN: +30 690 855 4649</a>
+    <br>
+    <a  href="mailto:eleni.tutueanu@gmail.com">EM: eleni.tutueanu@gmail.com</a>
+    <br>
+    <br>
+    <form action="action_page.php" id="contact-form">
+      <h2>ASK ME ANYTHING</h2>
+      <label for="fname">First Name</label>
+      <br>
+      <input type="text" id="fname" name="firstname" placeholder="Your name.." tabindex="1" required>
+      <br>
+      <label for="lname">Last Name</label>
+      <br>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <br>
+      <label for="country">Country</label>
+      <br>
+      <input type="text" id="country" name="country" placeholder="Your country..">
+      <br>
+      <label for="subject">Subject</label>
+      <br>
+      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <footer>
     <p>Find me on:</p>
     <img class="socials" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/20px-Octicons-mark-github.svg.png" alt="github logo">
     <img class="socials" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/20px-Logo_of_Twitter.svg.png" alt="twitter logo">
