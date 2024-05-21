@@ -73,6 +73,39 @@ window.addEventListener('click', (event) => {
   }
 });
 
+/*=============== CASE STUDY MODAL ===============*/
+const modalCViews = document.querySelectorAll('.case__modal'),
+      modalCBtns = document.querySelectorAll('.work__button3'),
+      modalCClose = document.querySelectorAll('.case__modal-close');
+
+let openModalC = function (modalClick) {
+  modalCViews[modalClick].classList.add('active-modal');
+};
+
+let closeModalC = function () {
+  modalCViews.forEach((mv) => {
+    mv.classList.remove('active-modal');
+  });
+};
+
+modalCBtns.forEach((mb, i) => {
+  mb.addEventListener('click', () => {
+    openModalC(i);
+  });
+});
+
+modalCClose.forEach((mc) => {
+  mc.addEventListener('click', () => {
+    closeModalC();
+  });
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('case__modal')) {
+    closeModalC();
+  }
+});
+
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.work__container', {
