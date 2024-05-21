@@ -121,7 +121,8 @@ img {
 }
 
 .span,
-.span-alt {
+.span-alt,
+.span-alt2 {
   font-weight: var(--font-semibold);
 }
 
@@ -129,8 +130,14 @@ img {
   color: var(--first-color-alt);
 }
 
-.span-alt {
+.span-alt,
+.span-alt2 {
   color: var(--body-font);
+}
+
+.span-alt2 {
+  display: block;
+  margin-top: 1rem;
 }
 
 /*=============== THEME ===============*/
@@ -335,9 +342,8 @@ body.light-theme {
 }
 
 /*=============== HOME ===============*/
-.homee__container {
-  position: relative;
-  row-gap: 4.5rem;
+.home__container {
+  row-gap: 4rem;
   padding-top: 2rem;
 }
 
@@ -360,6 +366,10 @@ body.light-theme {
 .home__education {
   color: var(--title-color);
   margin-bottom: 2.5rem;
+}
+
+.home__description {
+  margin-bottom: 2rem;
 }
 
 .home__name {
@@ -663,9 +673,10 @@ body.light-theme {
   transition: .4s;
 }
 
-/* Services & Work modal */
+/* Services & Work & Case Study modal */
 .services__modal,
-.work__modal {
+.work__modal,
+.case__modal {
   position: fixed;
   inset: 0;
   background-color: hsla(var(--second-hue), 28%, 16%, .7);
@@ -676,10 +687,12 @@ body.light-theme {
   opacity: 0;
   transition: .4s;
   z-index: var(--z-modal);
+  overflow: auto;
 }
 
 .services__modal-content,
-.work__modal-content {
+.work__modal-content,
+.case__modal-content {
   position: relative;
   background-color: var(--body-color);
   padding: 4.5rem 1.5rem 2.5rem;
@@ -690,7 +703,10 @@ body.light-theme {
 .services__modal-description,
 .work__modal-title,
 .work__modal-description,
-.work__modal-subtitle {
+.work__modal-subtitle,
+.case__modal-title,
+.case__modal-subtitle,
+.case__modal-subtitle2 {
   text-align: center;
 }
 
@@ -700,13 +716,16 @@ body.light-theme {
   margin-bottom: 1rem;
 }
 
-.work__modal-title {
+.work__modal-title,
+.case__modal-title {
   font-size: var(--h2-font-size);
   color: var(--first-color);
 }
 
 .work__modal-subtitle,
-.work__modal-subtitle2 {
+.work__modal-subtitle2,
+.case__modal-subtitle,
+.case__modal-subtitle2 {
   display: block;
   font-size: var(--normal-font-size);
   color: var(--title-color);
@@ -719,27 +738,41 @@ body.light-theme {
 }
 
 .services__modal-description,
-.work__modal-description {
+.work__modal-description,
+.case__modal-description {
   font-size: var(--small-font-size);
   margin-bottom: 2rem;
 }
 
-.work__modal-description {
-  max-width: 40rem;
+.work__modal-description,
+.case__modal-description {
   margin: 0 auto;
   padding: 0 5.5rem;
+}
+
+.work__modal-description {
+  max-width: 40rem;
   margin-bottom: 2rem;
 }
 
+.case__modal-description {
+  max-width: 55rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
 .services__modal-list,
-.work__modal-list {
+.work__modal-list,
+.case__modal-list {
   max-width: 40rem;
   display: grid;
   row-gap: .75rem;
+  margin: 0 auto;
 }
 
 .services__modal-item,
-.work__modal-item {
+.work__modal-item,
+.case__modal-item {
   display: flex;
   align-items: flex-start;
   column-gap: .5rem;
@@ -747,24 +780,55 @@ body.light-theme {
 }
 
 .services__modal-icon,
-.work__modal-icon {
+.work__modal-icon,
+.case__modal-icon {
   font-size: 1.5rem;
   color: var(--first-color);
 }
 
 .services__modal-info,
-.work__modal-info {
+.work__modal-info,
+.case__modal-info {
   font-size: var(--small-font-size);
 }
 
 .services__modal-close,
-.work__modal-close {
+.work__modal-close,
+.case__modal-close {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
   font-size: 1.5rem;
   color: var(--first-color);
   cursor: pointer;
+}
+
+/*Case study*/
+.case__img {
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  height: 20rem;
+  max-width: 25rem;
+}
+
+.case__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.case__link,
+.case__link:hover {
+  font-weight: var(--font-medium);
+}
+
+.case__link {
+  color: var(--body-font);
+}
+
+.case__link:hover {
+  color: var(--first-color);
 }
 
 /*Active modal*/
@@ -819,7 +883,8 @@ body.light-theme {
 }
 
 .work__button,
-.work__button2 {
+.work__button2,
+.work__button3 {
   width: max-content;
   color: var(--first-color);
   font-size: var(--small-font-size);
@@ -832,7 +897,9 @@ body.light-theme {
 .work__button:hover,
 .work__button2:hover,
 .work__button:hover .work__icon,
-.work__button2:hover .work__icon {
+.work__button2:hover .work__icon,
+.work__button3:hover,
+.work__button3:hover .work__icon {
   transform: translateX(.25rem);
 }
 
@@ -950,6 +1017,10 @@ body.light-theme {
   padding: 1.5rem;
   border-radius: .75rem;
   z-index: 1;
+}
+
+.contact__form-input:focus {
+  border: 2px solid var(--first-color-alt);
 }
 
 .contact__form-tag {
