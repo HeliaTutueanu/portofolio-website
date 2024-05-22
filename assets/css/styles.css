@@ -824,11 +824,11 @@ body.light-theme {
 }
 
 .case__link {
-  color: var(--body-font);
+  color: var(--first-color);
 }
 
 .case__link:hover {
-  color: var(--first-color);
+  color: var(--body-font);
 }
 
 /*Active modal*/
